@@ -1,14 +1,14 @@
 :root {
   --primary-color: #5293fb;
+  --secondary-color: rgb(243, 144, 30);
 }
 * {
   box-sizing: border-box;
 }
 
 body {
-  /* position: relative;
-  /* background: url(./img/exhange.jpg); */
-  /* background-size: cover; */
+  background-color: rgba(255, 205, 87, 0.705);
+  opacity: 0.9;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -19,21 +19,10 @@ body {
   padding: 20px;
   color: #000;
 }
-body::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  right: 0;
-  top: 0;
-  background-color: rgb(255, 205, 87);
-  opacity: 0.3;
-
-  z-index: -1;
-}
 
 h1 {
   color: var(--primary-color);
+  text-align: center;
 }
 
 p {
@@ -47,7 +36,7 @@ p {
   padding: 5px 12px;
 }
 .btn:hover {
-  background-color: rgb(252, 165, 95);
+  background-color: var(--secondary-color);
   color: #000;
 }
 
@@ -67,7 +56,7 @@ p {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  border: 1px solid #f10909;
+  border: 2px solid var(--secondary-color);
   border-radius: 3px;
   font-size: 16px;
   background: transparent;
@@ -92,7 +81,7 @@ p {
 }
 .amount-value1,
 .amount-value2 {
-  color: rgb(243, 144, 30);
+  color: var(--secondary-color);
 }
 .rate {
   color: var(--primary-color);
@@ -109,5 +98,8 @@ button:focus {
 @media (max-width: 600px) {
   .currency input {
     width: 200px;
+  }
+  .money-img {
+    width: 100px;
   }
 }
